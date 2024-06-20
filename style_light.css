@@ -1,0 +1,229 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FAFBFB;
+    transition: .4s;
+    border-radius: 34px; /* Rounded slider */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 50%; /* Round indicator */
+}
+
+.slider-icon {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-size: 20px; /* Adjust size as needed */
+    line-height: 26px; /* Center vertically */
+}
+
+.slider .slider-icon:last-child {
+    left: unset;
+    right: 4px;
+}
+
+input:checked + .slider {
+    background-color: #FAFBFB; /* Blue background in dark mode */
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #FAFBFB;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move indicator to the right for checked state */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAFBFB;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E1E1E1;
+    padding: 1em;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 1em;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(2, 1fr); /* Two equal rows */
+    gap: 20px; /* Gap between grid items */
+    padding: 20px;
+    margin: 20px auto; /* Centering content and adding space */
+    max-width: 1200px; /* Adjust as per your design */
+    background-color: #FAFBFB;
+    border-radius: 8px;
+}
+
+section {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#profile {
+    background-color: #E1E1E1;
+    grid-column: 1 / span 1; /* Span one column */
+    grid-row: 1 / span 1; /* Span one row */
+}
+
+#academic {
+    background-color: #E1E1E1;
+    grid-column: 2 / span 1; /* Span one column */
+    grid-row: 1 / span 1; /* Span one row */
+}
+
+#cv {
+    background-color: #E1E1E1;
+    grid-column: 1 / span 1; /* Span one column */
+    grid-row: 2 / span 1; /* Span one row */
+}
+
+#contact {
+    background-color: #E1E1E1;
+    grid-column: 2 / span 1; /* Span one column */
+    grid-row: 2 / span 1; /* Span one row */
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.cv-area p {
+    text-align: justify;
+}
+
+.academic-area ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.academic-area li {
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background-color: #222;
+}
+
+.local-time {
+    padding: 10px;
+}
+
+.local-time p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.language-switcher img {
+    width: 30px;
+    height: auto;
+}
+li a{
+    text-decoration: none;
+    color: #333;
+}
